@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Stop ciencia política. Menos política y más políticas</title>
+    <meta name="description" content="Han convertido la política en una partida, y a nosotros en público. Menos política y más políticas.">
+
+    <meta property="og:url" content="https://stopcienciapolitica.es/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="stop ciencia política.">
+    <meta property="og:site_name" content="stop ciencia política">
+    <meta property="og:description" content="Han convertido la política en una partida, y a nosotros en público.">
+    <meta property="og:image" content="https://stopcienciapolitica.es/og-image.png">
+    <meta property="og:locale" content="es_ES">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="stop ciencia política.">
+    <meta name="twitter:description" content="Han convertido la política en una partida, y a nosotros en público.">
+    <meta name="twitter:image" content="https://stopcienciapolitica.es/og-image.png">
+
+    <link rel="canonical" href="https://stopcienciapolitica.es/">
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        :root {
+            --ink: #000;
+            --text: #1d1d1f;
+            --muted: #6e6e73;
+            --line: #d2d2d7;
+            --accent: #007aff;
+            --bad: #ff3b30;
+            --good: #34c759;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            max-width: 720px;
+            margin: 0 auto;
+            padding: 4rem 2.5rem 8rem;
+            line-height: 1.6;
+            background: #fff;
+            color: var(--ink);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        h1 {
+            font-size: 4.5rem;
+            font-weight: 700;
+            letter-spacing: -0.04em;
+            line-height: 1;
+            margin-bottom: 1rem;
+        }
+
+        .tagline {
+            font-size: 1.75rem;
+            color: var(--muted);
+            line-height: 1.3;
+            margin-bottom: 5rem;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            line-height: 1.1;
+            margin: 8rem 0 3rem;
+        }
+
+        p {
+            font-size: 1.25rem;
+            line-height: 1.5;
+            color: var(--text);
+            margin-bottom: 2rem;
+        }
+
+        .example {
+            margin: 4rem 0;
+        }
+
+        .label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.125rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+        }
+
+        .label::before {
+            font-size: 1.375rem;
+            line-height: 1;
+        }
+
+        .label.bad::before { content: "✕"; color: var(--bad); }
+        .label.good::before { content: "✓"; color: var(--good); }
+
+        .post {
+            display: flex;
+            gap: 0.75rem;
+            border: 1px solid #e0e0e0;
+            border-radius: 12px;
+            padding: 1.5rem;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .avatar {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2.25rem;
+            background: #eff3f4;
+        }
+
+        .post-body { flex: 1; min-width: 0; }
+
+        .post-head {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 0 0.4rem;
+            margin-bottom: 0.25rem;
+            font-size: 0.9375rem;
+        }
+
+        .user { font-weight: 700; }
+        .handle, .time { color: var(--muted); }
+
+        .post-text {
+            font-size: 0.9375rem;
+            line-height: 1.5;
+            color: var(--text);
+            overflow-wrap: break-word;
+        }
+
+        .post-text.jerga { color: var(--muted); }
+
+        a:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 2px;
+        }
+
+        hr {
+            height: 1px;
+            background: var(--line);
+            border: none;
+            margin: 8rem 0;
+        }
+
+        .principle {
+            font-size: 2.25rem;
+            font-weight: 700;
+            line-height: 1.3;
+            letter-spacing: -0.02em;
+            text-align: center;
+            margin: 10rem 0;
+        }
+
+        .share {
+            text-align: center;
+            margin: 4rem 0 2rem;
+        }
+
+        .share-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.4rem;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 1.125rem;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            transition: background-color 0.2s;
+        }
+
+        .share-link:hover { background-color: #f5f5f5; }
+
+        .share-icon { width: 18px; height: 18px; }
+
+        footer {
+            margin-top: 8rem;
+            padding-top: 2.5rem;
+            border-top: 1px solid #e5e5e7;
+            text-align: center;
+        }
+
+        footer p {
+            font-size: 0.75rem;
+            color: var(--muted);
+            margin-bottom: 0;
+        }
+
+        footer a { color: #06c; text-decoration: none; }
+        footer a:hover { text-decoration: underline; }
+
+        @media (max-width: 734px) {
+            body { padding: 4rem 2rem 6rem; }
+            h1 { font-size: 3rem; }
+            .tagline { font-size: 1.375rem; margin-bottom: 5rem; }
+            h2 { font-size: 2rem; margin: 5rem 0 2rem; }
+            .principle { font-size: 1.75rem; margin: 6rem 0; }
+            .post { padding: 1rem; }
+            .avatar { width: 48px; height: 48px; font-size: 1.875rem; }
+        }
+    </style>
+</head>
+<body>
+
+<h1>stop ciencia política.</h1>
+<p class="tagline">Han convertido la política en una partida, y a nosotros en público.</p>
+
+<div class="example">
+    <div class="label bad">Así no</div>
+    <article class="post">
+        <div class="avatar" aria-hidden="true">🧌</div>
+        <div class="post-body">
+            <header class="post-head">
+                    <span class="user">Politólogo 1</span>
+                    <span class="handle">@politologo1</span>
+                    <span class="time">· 2 h</span>
+                </header>
+            <div class="post-text jerga">Lo de hoy en el Congreso hay que leerlo en clave de tablero. Es un movimiento para fijar el marco antes de las elecciones, desactivar el relato del adversario y obligar a los socios a bla bla bla...</div>
+        </div>
+    </article>
+</div>
+
+<div class="example">
+    <div class="label good">Así sí</div>
+    <article class="post">
+        <div class="avatar" aria-hidden="true">🙂</div>
+        <div class="post-body">
+            <header class="post-head">
+                    <span class="user">Politólogo 2</span>
+                    <span class="handle">@politologo2</span>
+                    <span class="time">· 2 h</span>
+                </header>
+            <div class="post-text">Voy a desactivar mi cuenta y dejar de opinar porque da igual lo que digo.</div>
+        </div>
+    </article>
+</div>
+
+<h2>♟️ Qué ha pasado</h2>
+<p>Politólogos, sociólogos y teóricos de la política se han hecho con la conversación.</p>
+<p>Hablan todos igual: marco, relato, agenda, jugada, tablero, capital político. Han visto muchas series y creen que esto es un concurso de listos.</p>
+
+<h2>👀 Dónde están</h2>
+<p>Están en las redes, los partidos, en el gobierno y en los medios. Son como una plaga y no te puedes escapar.</p>
+
+<h2>🥱 Por qué hacen daño</h2>
+<p>Porque dan mucha pereza y nos han convertido en público de su infotainment: ganadores, perdedores y giros de guion, todo el santo día.</p>
+<p>Sustituyen la política por su comentario. Cuando todo es jugada, no hay soluciones, no se hace política real. Todo es cálculo y cinismo, nadie se cree nada.</p>
+
+<hr>
+
+<p class="principle">Menos política y más políticas.</p>
+
+<hr>
+
+<div class="share">
+    <p>Si alguien te explica la política como una partida, compártele esta página:</p>
+    <a href="#" class="share-link" id="share">
+        <svg class="share-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="18" cy="5" r="3"></circle>
+            <circle cx="6" cy="12" r="3"></circle>
+            <circle cx="18" cy="19" r="3"></circle>
+            <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+            <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+        </svg>
+        <span id="share-label">Compartir</span>
+    </a>
+</div>
+
+<footer>
+    <p>Inspirado en <a href="https://noslopgrenade.com/">noslopgrenade.com</a>.</p>
+</footer>
+
+<script>
+    var share = document.getElementById('share');
+    var label = document.getElementById('share-label');
+    var original = label.textContent;
+    var url = location.origin + location.pathname;
+
+    if (location.host) label.textContent = original = location.host;
+
+    function copied() {
+        label.textContent = '¡Copiado!';
+        setTimeout(function () { label.textContent = original; }, 2000);
+    }
+
+    function copy() {
+        if (navigator.clipboard) {
+            navigator.clipboard.writeText(url).then(copied, function () {});
+        }
+    }
+
+    share.addEventListener('click', function (e) {
+        e.preventDefault();
+        if (navigator.share) {
+            navigator.share({
+                title: 'stop ciencia política.',
+                text: 'Han convertido la política en una partida, y a nosotros en público.',
+                url: url
+            }).catch(copy);
+        } else {
+            copy();
+        }
+    });
+</script>
+
+</body>
+</html>
